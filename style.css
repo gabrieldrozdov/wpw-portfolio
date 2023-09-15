@@ -1,0 +1,297 @@
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* GLOBAL STYLES */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* This applies CSS to every element on the page */
+/* I always start CSS files with this because it makes layout easier later on */
+/* Some elements, like the body and text elements, have default margins I want to remove */
+/* box-sizing makes it easier to set the widths of elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* By default, images can sometimes be bigger than the containers they're in */
+/* We can fix that by setting a max width to all images of 100% */
+img {
+	max-width: 100%;
+}
+
+/* Make anchor links smoothly scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+/* These are CSS variables */
+/* You can reference them later on using the form var(--variablename) (e.g. var(--primary) */
+:root {
+	--primary: #ffff00;
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* CUSTOM FONTS */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* Setting up the custom font Montserrat with both regular and italic versions */
+/* This font file was obtained from Google Fonts */
+@font-face {
+	font-family: "Montserrat";
+	src: url("assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("assets/fonts/Montserrat-Italic-VariableFont_wght.ttf");
+	font-style: italic;
+}
+
+/* This is a variable font file, so we can use any font-weight property we want */
+body {
+	font-family: "Monrserrat", sans-serif;
+	font-weight: 400;
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* NAVIGATION (NAVBAR) */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+.portfolio-nav {
+	height: 60px;
+	padding: 10px 20px; /* top-bottom padding, then left-right padding */
+	background-color: rgba(0,0,0,.1);
+
+	/* Set position to stay at top of page always */
+	position: sticky;
+	top: 0;
+	z-index: 999999; /* make sure the nav is always on top */
+
+	/* Position items inside div */
+	display: flex;
+	align-items: center; /* center vertically */
+	gap: 10px;
+
+	/* Blur everything behind it */
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px); /* needed for Safari */
+}
+
+/* Logo */
+.portfolio-nav img {
+	height: 40px;
+}
+
+/* Links */
+.portfolio-nav-link {
+	/* Override default CSS styles */
+	color: black;
+	text-decoration: none;
+
+	background-color: white;
+	border-radius: 10px;
+	padding: 5px 10px; /* top-bottom padding, then left-right padding */
+
+	/* Transition CSS properties on :hover and :active */
+	transition: .2s;
+}
+.portfolio-nav-link:hover {
+	background-color: black;
+	color: white;
+}
+.portfolio-nav-link:active {
+	opacity: .5;
+}
+
+/* Flex child to take up extra space between navbar links */
+.portfolio-nav-spacer {
+	flex-grow: 1;
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* PAGE HEADER */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+.portfolio-header {
+	/* Style div */
+	width: 100vw;
+	height: 80vh;
+	background-image: url('assets/homepage/header.gif');
+	background-position: center;
+	background-size: cover;
+
+	/* Position items inside of div */
+	display: flex;
+	flex-direction: column; /* wrap vertically, not horizontally (default) */
+	align-items: center; /* center horizontally */
+	justify-content: center; /* center vertically */
+	gap: 20px; /* space between children */
+}
+
+/* Header links */
+.portfolio-header-links {
+	display: flex;
+	gap: 20px;
+}
+.portfolio-header-links a {
+	/* Override default link styles */
+	color: black;
+	text-decoration: none;
+
+	border-radius: 10px;
+	padding: 10px 20px; /* top-bottom padding, then left-right padding */
+	background-color: white;
+
+	/* Transition CSS properties on :hover and :active */
+	transition: .2s;
+}
+.portfolio-header-links a:hover {
+	background-color: black;
+	color: white;
+	transform: scale(1.05);
+}
+.portfolio-header-links a:active {
+	transform: scale(0.9);
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* MAIN CONTENT */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+.portfolio-grid {
+	padding: 20px;
+
+	/* Position items inside of div (children) */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+/* Child elements are all "a" (link) elements */
+.portfolio-grid a {
+	/* Override default link styles for text */
+	color: black;
+	text-decoration: none;
+
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 20px;
+
+	transition: background-color .2s, opacity .2s, transform .2s;
+}
+.portfolio-grid a:hover {
+	background-color: var(--primary); /* using a CSS variable (see the :root definition at the top of this document */
+	transform: scale(1.01) rotate(1deg); /* multiple transforms have to be in the same CSS property */
+}
+.portfolio-grid a:active {
+	opacity: .5;
+	transform: scale(0.99) rotate(-1deg);
+}
+
+/* Portfolio item title */
+.portfolio-grid a h2 {
+	margin-top: 20px;
+	font-size: 32px;
+}
+
+/* Animate the portfolio item image when the link is hovered */
+@keyframes portfolio-image-animation {
+	0% {
+		filter: invert(0%);
+	}
+	100% {
+		filter: invert(100%);
+	}
+}
+.portfolio-grid a:hover img {
+	animation-name: portfolio-image-animation;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+/* Portfolio item description */
+.portfolio-grid a p {
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+/* Portfolio item tags */
+.portfolio-grid ul {
+	margin-top: 20px;
+	font-size: 12px;
+
+	/* Remove bullet points */
+	list-style: none;
+
+	/* Make text uppercase */
+	text-transform: uppercase;
+
+	/* Position items inside of div (children) */
+	display: flex;
+	gap: 5px;
+}
+.portfolio-grid ul li {
+	background-color: rgb(100,100,100);
+	color: white;
+	border-radius: 10px;
+	padding: 5px 10px;
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* FOOTER */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+.portfolio-footer {
+	padding: 80px;
+	background-color: black;
+	color: white;
+
+	/* Position items inside of div (children) */
+	display: flex;
+	justify-content: space-between;
+}
+.portfolio-footer a {
+	color: white;
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* MOBILE STYLES (BREAKPOINTS) */
+/* ————————————————————————————————————————————————————————————————— */
+/* ————————————————————————————————————————————————————————————————— */
+/* This code will only run when the screen is under a certain width */
+/* We can reverse this by changing max-width into min-width */
+@media only screen and (max-width: 1200px) {
+	.portfolio-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	.portfolio-grid a h2 {
+		font-size: 24px;
+	}
+	.portfolio-grid a p {
+		font-size: 14px;
+	}
+	.portfolio-grid a ul {
+		font-size: 10px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+	.portfolio-footer {
+		flex-direction: column;
+	}
+}

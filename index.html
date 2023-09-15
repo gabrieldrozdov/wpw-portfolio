@@ -1,0 +1,223 @@
+<!-- HTML documents always start with these tags -->
+<!-- When you create a new .html file in VS Code, start by typing in "!" -->
+<!-- This will create a template with all of the important info for your file -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- METADATA -->
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- This is invisible information that helps your site run properly -->
+<head>
+
+
+	<!-- ESSENTIAL METADATA -->
+	<!-- You should have this code on every site you create -->
+	<!-- It mainly just makes sure your site runs well on mobile devices -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- BASIC METADATA -->
+	<!-- This is info that appears in Google searches and also when you send people a link to your website -->
+	<title>My Cool Cool Portfolio</title>
+	<meta name="author" content="Gabriel Drozdov">
+	<meta name="keywords" content="Graphic Design, Portfolio, Web Design">
+	<meta name="description" content="Check out my cool cool portfolio!">
+	<meta property="og:url" content="https://gabrieldrozdov.github.io/wpw-portfolio/">
+	<meta name="og:title" property="og:title" content="My Cool Cool Portfolio">
+	<meta property="og:description" content="Check out my cool cool portfolio!">
+	<!-- Open Graph (OG) images appear on social media -->
+	<!-- They should be at least 1200x630 pixels -->
+	<meta property="og:image" content="assets/meta/opengraph.jpg">
+
+
+	<!-- FAVICON -->
+	<!-- This image appears in the tab bar of your browser -->
+	<!-- Favicons should be 32x32 pixels and .png files -->
+	<link rel="icon" type="image/png" href="assets/meta/favicon.png">
+
+
+	<!-- CSS -->
+	<!-- We're writing our CSS in a separate document -->
+	<!-- We can link to the CSS using the following code -->
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- CONTENT -->
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+<!-- This is everything visible on the website -->
+<body>
+
+
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- NAVIGATION (NAVBAR) -->
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- This is a semantic HTML element that functions just like a div -->
+	<nav class="portfolio-nav">
+		<a class="portfolio-nav-logo" href="/">
+			<img src="assets/meta/logo.svg">
+		</a>
+		<div class="portfolio-nav-spacer"></div>
+		<a class="portfolio-nav-link" href="about/">About</a>
+		<a class="portfolio-nav-link" href="mailto:gabriel@noreplica.com">Contact</a>
+	</nav>
+
+
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- PAGE HEADER -->
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- This is a semantic HTML element that functions just like a div -->
+	<header class="portfolio-header">
+
+		<!-- All websites should have an h1 tag for SEO (search engine optimization) purposes -->
+		<h1>Welcome to my portfolio!</h1>
+
+		<div class="portfolio-header-links">
+			<a href="#portfolio">View my projects</a>
+			<a href="mailto:gabriel@noreplica.com">Send me an email</a>
+		</div>
+
+	</header>
+
+
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- MAIN CONTENT -->
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- This is a semantic HTML element that functions just like a div -->
+	<main class="portfolio-grid" id="portfolio">
+
+		<a href="projects/project1/">
+			<img src="assets/homepage/work1.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project2/">
+			<img src="assets/homepage/work2.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project3/">
+			<img src="assets/homepage/work3.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project4/">
+			<img src="assets/homepage/work4.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project5/">
+			<img src="assets/homepage/work5.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project6/">
+			<img src="assets/homepage/work6.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project7/">
+			<img src="assets/homepage/work7.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project8/">
+			<img src="assets/homepage/work1.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project9/">
+			<img src="assets/homepage/work2.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+		<a href="projects/project10/">
+			<img src="assets/homepage/work3.jpg">
+			<h2>Title of project</h2>
+			<p>Project description goes here.</p>
+			<ul>
+				<li>Branding</li>
+				<li>Web Design</li>
+				<li>Graphic Design</li>
+			</ul>
+		</a>
+
+	</main>
+
+
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- FOOTER -->
+	<!-- ———————————————————————————————————————————————————————————————————————————————— -->
+	<!-- This is a semantic HTML element that functions just like a div -->
+	<footer class="portfolio-footer">
+		<p>© 2023 Your Cool Name</p>
+		<a href="mailto:gabriel@noreplica.com">Email me!</a>
+	</footer>
+
+
+</body>
+
+<!-- Don't forget to close the HTML tag from the start of the document! -->
+</html>
